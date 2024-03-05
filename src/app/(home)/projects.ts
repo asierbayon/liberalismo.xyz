@@ -52,6 +52,13 @@ export const projects: IProject[] = [
     creatorUrl: "https://twitter.com/JaimeObregon",
   },
   {
+    name: "Comunidad Instituto Juan de Mariana",
+    description: "Comunidad liberal en Whatsapp del IJM.",
+    urlText: "Ver en Whatsapp",
+    url: "https://chat.whatsapp.com/LPyrNBo3Jj14tMdq1kE7Ya",
+    category: "Comunidad",
+  },
+  {
     name: "Citas liberales",
     description: "Recopilación de citas liberales.",
     urlText: "Ver en Twitter",
