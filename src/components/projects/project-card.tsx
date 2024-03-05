@@ -10,6 +10,9 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 
+import { Badge } from "../ui/badge"
+import { ColoredBadge } from "../ui/colored-badge"
+
 interface ProjectCardProps {
   project: IProject
 }
@@ -23,7 +26,20 @@ export function ProjectCard({ project }: ProjectCardProps) {
             <CardTitle className="text-sm font-semibold">
               {project.name}
             </CardTitle>
+            <Badge variant="secondary">{project.category}</Badge>
           </div>
+          {project.creatorUrl && (
+            <p className="text-sm">
+              por{" "}
+              <a
+                href={project.creatorUrl}
+                target="_blank"
+                className="hover:underline"
+              >
+                @{new URL(project.creatorUrl).pathname.split("/")[1]}
+              </a>
+            </p>
+          )}
         </CardHeader>
         <CardContent>
           <p className="text-sm text-muted-foreground">{project.description}</p>

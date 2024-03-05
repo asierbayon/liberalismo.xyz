@@ -20,4 +20,6 @@ export interface IProject {
   url?: string
   urlText?: string
   punchline?: string
+  creatorUrl?: string
+  category: string
 }
