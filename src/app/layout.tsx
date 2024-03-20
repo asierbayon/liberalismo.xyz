@@ -2,6 +2,7 @@ import "@/styles/globals.css"
 
 import { Metadata, Viewport } from "next"
 import { Inter } from "next/font/google"
+import { FaDiscord } from "react-icons/fa"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -68,18 +69,39 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
+        style={{
+          backgroundImage: "url('/background.webp')",
+        }}
         className={cn(
-          "bg-background text-zinc-800 antialiased dark:text-zinc-200",
+          "flex h-screen items-center justify-center bg-cover bg-center bg-no-repeat",
           inter.className
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+        <a
+          href="https://discord.gg/QTcYcT7D"
+          target="__blank"
+          style={{
+            height: 75,
+            width: 300,
+            padding: "0 50px",
+            marginTop: 400,
+            background: "rgba(255, 255, 255, 0.38)",
+            borderRadius: 16,
+            boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+            border: "1px solid rgba(255, 255, 255, 0.22)",
+          }}
+          className="flex items-center justify-between backdrop-blur"
+        >
+          <FaDiscord size={50} color="black" />
+          <h2 className="text-xl font-bold">¡Únete ahora!</h2>
+        </a>
+        {/*         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="container flex min-h-screen flex-col py-4 md:w-[45rem] md:py-8">
             <Navbar />
             {children}
             <Footer />
           </div>
-        </ThemeProvider>
+        </ThemeProvider> */}
         <script
           data-goatcounter="https://liberalismoxyz.goatcounter.com/count"
           async
